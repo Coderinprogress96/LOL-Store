@@ -1,6 +1,5 @@
 const MAX_BLUE_ESSENCE = 20000;
 const MAX_RIOT_POINTS = 5000;
-const TOTAL_SKINS = 6;
 const CHAMPIONS_DATA_URL = 'http://ddragon.leagueoflegends.com/cdn/10.6.1/data/en_US/champion.json';
 const SKINS_BASE_URL = 'http://ddragon.leagueoflegends.com/cdn/img/champion/loading/';
 
