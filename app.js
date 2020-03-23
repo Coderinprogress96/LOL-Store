@@ -59,11 +59,13 @@ function getDiscountPrice(price, discount) {
 
 //Discounts of the skins
 for (var i = 0; i < discounts.length; i++) {
+    //Random stock skin's prices
     var randomSkinIndex = getRandomNumber(0, SKIN_PRICES.length -1);
     stockPrices[i].textContent = SKIN_PRICES[randomSkinIndex];
-    
+    //Random Skin's Discount
     discounts[i].textContent = getRandomNumber(MIN_DISCOUNT, MAX_DISCOUNT) + "%";
-
+    //Changin all the stock prices, skin's discount and
+    //setting the new prices calculating the stock prices and discounts
     var stockPrice = parseInt(stockPrices[i].textContent);
     var discSkin = parseInt(discounts[i].textContent);
     newPrices[i].textContent = getDiscountPrice(stockPrice, discSkin);
