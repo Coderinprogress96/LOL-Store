@@ -4,8 +4,8 @@ const MAX_RIOT_POINTS = 5000;
 const MIN_DISCOUNT = 15;
 const MAX_DISCOUNT = 90;
 const SKIN_PRICES = [420, 750, 975, 1350, 1850, 3250];
-const CHAMPIONS_DATA_URL = 'http://ddragon.leagueoflegends.com/cdn/10.6.1/data/en_US/champion.json';
-const SKINS_BASE_URL = 'http://ddragon.leagueoflegends.com/cdn/img/champion/loading/';
+const CHAMPIONS_DATA_URL = 'https://ddragon.leagueoflegends.com/cdn/10.6.1/data/en_US/champion.json';
+const SKINS_BASE_URL = 'https://ddragon.leagueoflegends.com/cdn/img/champion/loading/';
 
 var blueEssence = document.getElementById('blue_essence');
 var riotPoints = document.getElementById('riot_points');
@@ -76,7 +76,7 @@ function getDiscountPrice(price, discount) {
 //Discounts of the skins
 for (var i = 0; i < discounts.length; i++) {
     //Random stock skin's prices
-    var randomSkinIndex = getRandomNumber(0, SKIN_PRICES.length -1);
+    var randomSkinIndex = getRandomNumber(0, SKIN_PRICES.length - 1);
     stockPrices[i].textContent = SKIN_PRICES[randomSkinIndex];
     //Random Skin's Discount
     discounts[i].textContent = getRandomNumber(MIN_DISCOUNT, MAX_DISCOUNT) + "%";
